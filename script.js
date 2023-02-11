@@ -54,7 +54,18 @@ function PlayRound() {
 }
 
 function game(){
+    let countPlayer = 0;
+    let countComputer = 0;
+    let drawGame = 0;
     for(let i = 0; i < 5 ; i++){
-        
+        let gameRound = PlayRound();
+        if (gameRound === 'empate'){
+            drawGame++;
+        }else if (gameRound === 'player'){
+            countPlayer++;
+        } else {
+            countComputer++;
+        }
     }
+    alert("En 5 partidas usted:\n"+"gano: "+countPlayer+"\nPerdio: "+countComputer+"\nEmpato: "+drawGame);
 }
